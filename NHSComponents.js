@@ -21,7 +21,7 @@ export function NHSFormLabel(props) {
 }
 
 export function NHSFormHint(props) {
-    return <span className="nhsuk-hint" id="input-with-hint-text-hint" {...props} />;
+    return <span className="nhsuk-hint" {...props} />;
 }
 
 export function NHSFormControl(props) {
