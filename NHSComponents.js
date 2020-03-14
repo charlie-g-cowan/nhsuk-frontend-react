@@ -31,3 +31,7 @@ export function NHSFormControl(props) {
 export function NHSFormGroup(props) {
     return <div class='nhsuk-form-group' {...props} />;
 }
+
+export function NHSTextArea(props){
+    return <textarea class='nhsuk-textarea' {...props} />;
+}
