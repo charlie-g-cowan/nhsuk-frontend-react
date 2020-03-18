@@ -44,7 +44,7 @@ export function NHSHeaderMenuToggle() {
 
 
 export function NHSHeader(props) {
-    return <header className="nhsuk-header" style={{ fontFamily: 'Frutiger W01, Arial, Sans-serif' }} {...props} />;
+    return <header className="nhsuk-header" style={{ fontFamily: 'Arial, Sans-serif' }} {...props} />;
 }
 
 export function NHSHeaderContainer(props) {
