@@ -3,13 +3,13 @@ import 'nhsuk-frontend/dist/nhsuk.min.js';
 import { NHSSearch } from "./NHSSearch";
 import { NHSVectorChevronRight, NHSVectorClose } from "./NHSIcons";
 
-function NHSNav(props) {
+export function NHSNav(props) {
     return <ul className="nhsuk-header__navigation-list" style={{ justifyContent: 'left' }}>
         {props.children}
     </ul>;
 }
 
-function NHSNavLink(props) {
+export function NHSNavLink(props) {
     return <li className="nhsuk-header__navigation-item">
         <a className="nhsuk-header__navigation-link" href={props.href}>
             {props.children}
@@ -18,7 +18,7 @@ function NHSNavLink(props) {
     </li>;
 }
 
-function NHSAppLogo(props) {
+export function NHSAppLogo(props) {
     const headingSize = props.smaller ? 'nhsuk-heading-m' : 'nhsuk-heading-l';
     return <div className="nhsuk-header__logo">
         <h1 className={"nhsuk-logo__text " + headingSize}
@@ -26,7 +26,7 @@ function NHSAppLogo(props) {
     </div>;
 }
 
-function NHSHeaderMenu() {
+export function NHSHeaderMenu() {
     return <p className="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
         <button className="nhsuk-header__navigation-close" id="close-menu">
             <NHSVectorClose/>
@@ -35,7 +35,7 @@ function NHSHeaderMenu() {
     </p>;
 }
 
-function NHSHeaderMenuToggle() {
+export function NHSHeaderMenuToggle() {
     return <div className="nhsuk-header__menu">
         <button className="nhsuk-header__menu-toggle" id="toggle-menu">Menu
         </button>
@@ -43,34 +43,52 @@ function NHSHeaderMenuToggle() {
 }
 
 
-function NHSHeader(props) {
+export function NHSHeader(props) {
+    return <header className="nhsuk-header" style={{ fontFamily: 'Frutiger W01, Arial, Sans-serif' }} {...props} />;
+}
+
+export function NHSHeaderContainer(props) {
+    return <div className="nhsuk-width-container nhsuk-header__container" {...props} />;
+}
+
+export function NHSWidthContainer(props) {
+    return <div className="nhsuk-width-container" {...props} />;
+}
+
+export function NHSHeaderNavigation(props) {
+    return <nav className="nhsuk-header__navigation" id="header-navigation" {...props} />;
+}
+
+export function NHSHeaderContent(props) {
+    return <div className="nhsuk-header__content" id="content-header" {...props}/>;
+}
+
+export function NHSHeaderOrthoPROMS(props) {
     const navigation = props.navigationDisabled ? null :
-        <nav className="nhsuk-header__navigation" id="header-navigation">
-            <div className="nhsuk-width-container">
+        <NHSHeaderNavigation>
+            <NHSWidthContainer>
                 <NHSHeaderMenu/>
                 <NHSNav>
                     <NHSNavLink href='/'>Home</NHSNavLink>
                     <NHSNavLink href='/About'>About</NHSNavLink>
                     <NHSNavLink href='/NationalStatistics'>National Statistics</NHSNavLink>
                 </NHSNav>
-            </div>
-        </nav>;
+            </NHSWidthContainer>
+        </NHSHeaderNavigation>;
     const search = props.searchDisabled ? null : <NHSSearch/>;
     const headerContent = props.searchDisabled && props.navigationDisabled ? null :
-        <div className="nhsuk-header__content" id="content-header">
+        <NHSHeaderContent>
             <NHSHeaderMenuToggle/>
             {search}
-        </div>;
+            {props.children}
+        </NHSHeaderContent>;
     return (
-        <header className="nhsuk-header"
-                style={{ fontFamily: 'Frutiger W01, Arial, Sans-serif' }}>
-            <div className="nhsuk-width-container nhsuk-header__container">
+        <NHSHeader>
+            <NHSHeaderContainer>
                 <a href={'/'}><NHSAppLogo smaller={props.navigationDisabled}>orthoPROMS</NHSAppLogo></a>
                 {headerContent}
-            </div>
+            </NHSHeaderContainer>
             {navigation}
-        </header>
+        </NHSHeader>
     );
 }
-
-export default NHSHeader;
