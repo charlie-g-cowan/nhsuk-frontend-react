@@ -20,6 +20,14 @@ export function NHSSummaryListRow(props) {
     </div>;
 }
 
+export function NHSSummaryListChange(props) {
+    return <dd className="nhsuk-summary-list__actions">
+        <a style={{textDecoration: "underline", color:"blue", cursor:"pointer"}} onClick={props.onClick}>
+            Change
+        </a>
+    </dd>;
+}
+
 export function NHSSummaryList(props) {
     return <dl className="nhsuk-summary-list" style={props.style}>
         {props.children}
