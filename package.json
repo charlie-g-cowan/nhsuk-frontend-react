@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charlie-g-cowan/nhsuk-frontend-react.git"
+    "url": "git+https://github.com/charlie-g-cowan/react-styled-nhs.git"
   },
   "author": "Charlie Cowan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/charlie-g-cowan/nhsuk-frontend-react/issues"
+    "url": "https://github.com/charlie-g-cowan/react-styled-nhs/issues"
   },
-  "homepage": "https://github.com/charlie-g-cowan/nhsuk-frontend-react#readme",
+  "homepage": "https://github.com/charlie-g-cowan/react-styled-nhs#readme",
   "dependencies": {
     "nhsuk-frontend": "^3.0.4"
   }
