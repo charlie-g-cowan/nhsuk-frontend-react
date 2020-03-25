@@ -1,6 +1,6 @@
 import React from "react";
 import { NHSVectorChevronLeft } from "./NHSIcons";
-import 'nhsuk-frontend/dist/nhsuk.min.js';
+// import 'nhsuk-frontend/dist/nhsuk.min.js';
 import 'nhsuk-frontend/packages/nhsuk.scss';
 
 function NHSBackLink(props) {

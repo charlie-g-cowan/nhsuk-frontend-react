@@ -83,13 +83,11 @@ export function NHSHeaderOrthoPROMS(props) {
             {search}
             {props.children}
         </NHSHeaderContent>;
-    return (
-        <NHSHeader>
+    return <NHSHeader>
             <NHSHeaderContainer>
                 <a href={'/'}><NHSAppLogo smaller={props.navigationDisabled}>orthoPROMS</NHSAppLogo></a>
                 {headerContent}
             </NHSHeaderContainer>
             {navigation}
-        </NHSHeader>
-    );
+        </NHSHeader>;
 }

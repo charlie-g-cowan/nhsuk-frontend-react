@@ -1,10 +1,9 @@
 import React from 'react';
-import 'nhsuk-frontend/dist/nhsuk.min.js';
+// import 'nhsuk-frontend/dist/nhsuk.min.js';
 import 'nhsuk-frontend/packages/nhsuk.scss';
 
 function NHSFooter(props) {
-    return (
-        <footer role="contentinfo">
+    return <footer role="contentinfo">
             <div className="nhsuk-footer" id="nhsuk-footer">
                 <div className="nhsuk-width-container">
                     <h2 className="nhsuk-u-visually-hidden">Support links</h2>
@@ -19,8 +18,7 @@ function NHSFooter(props) {
                     <p className="nhsuk-footer__copyright">Created by Charlie Cowan, Menghang Hao, Haze Al-Johary</p>
                 </div>
             </div>
-        </footer>
-    );
+        </footer>;
 }
 
 export default NHSFooter;
