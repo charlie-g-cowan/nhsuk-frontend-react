@@ -1,0 +1,22 @@
+{
+  "name": "react-styled-nhs",
+  "version": "0.0.1",
+  "description": "Some components that implement NHS styles based on nhsuk-frontend (without fonts)",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlie-g-cowan/nhsuk-frontend-react.git"
+  },
+  "author": "Charlie Cowan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charlie-g-cowan/nhsuk-frontend-react/issues"
+  },
+  "homepage": "https://github.com/charlie-g-cowan/nhsuk-frontend-react#readme",
+  "dependencies": {
+    "nhsuk-frontend": "^3.0.4"
+  }
+}

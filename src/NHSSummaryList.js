@@ -1,5 +1,6 @@
 import React from 'react';
 import 'nhsuk-frontend/dist/nhsuk.min.js';
+import 'nhsuk-frontend/packages/nhsuk.scss';
 
 export function NHSSummaryListKey(props) {
     return <dt className="nhsuk-summary-list__key">

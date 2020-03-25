@@ -1,5 +1,6 @@
 import React from 'react';
 import 'nhsuk-frontend/dist/nhsuk.min.js';
+import 'nhsuk-frontend/packages/nhsuk.scss';
 import { NHSSearch } from "./NHSSearch";
 import { NHSVectorChevronRight, NHSVectorClose } from "./NHSIcons";
 
