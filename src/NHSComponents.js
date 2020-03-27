@@ -26,13 +26,25 @@ export function NHSFormHint(props) {
 }
 
 export function NHSFormControl(props) {
-    return <input class='nhsuk-input' {...props} />;
+    if (props.error) {
+        return <input class='nhsuk-input nhsuk-input--error' {...props} />;
+    } else {
+        return <input class='nhsuk-input' {...props} />;
+    }
 }
 
 export function NHSFormGroup(props) {
-    return <div class='nhsuk-form-group' {...props} />;
+    if (props.error) {
+        return <div class="nhsuk-form-group nhsuk-form-group--error" {...props} />;
+    } else {
+        return <div class='nhsuk-form-group' {...props} />;
+    }
 }
 
-export function NHSTextArea(props){
+export function NHSFormError(props) {
+    return <span id="input-with-error-message-error" className="nhsuk-error-message" {...props} />;
+}
+
+export function NHSTextArea(props) {
     return <textarea class='nhsuk-textarea' {...props} />;
 }
