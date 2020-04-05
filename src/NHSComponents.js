@@ -18,7 +18,7 @@ export function NHSButtonSecondary(props) {
 }
 
 export function NHSFormLabel(props) {
-    return <label class='nhsuk-label' {...props} />;
+    return <label className='nhsuk-label' {...props} />;
 }
 
 export function NHSFormHint(props) {
@@ -27,17 +27,17 @@ export function NHSFormHint(props) {
 
 export function NHSFormControl(props) {
     if (props.error) {
-        return <input class='nhsuk-input nhsuk-input--error' {...props} />;
+        return <input className='nhsuk-input nhsuk-input--error' {...props} />;
     } else {
-        return <input class='nhsuk-input' {...props} />;
+        return <input className='nhsuk-input' {...props} />;
     }
 }
 
 export function NHSFormGroup(props) {
     if (props.error) {
-        return <div class="nhsuk-form-group nhsuk-form-group--error" {...props} />;
+        return <div className="nhsuk-form-group nhsuk-form-group--error" {...props} />;
     } else {
-        return <div class='nhsuk-form-group' {...props} />;
+        return <div className='nhsuk-form-group' {...props} />;
     }
 }
 
@@ -46,5 +46,5 @@ export function NHSFormError(props) {
 }
 
 export function NHSTextArea(props) {
-    return <textarea class='nhsuk-textarea' {...props} />;
+    return <textarea className='nhsuk-textarea' {...props} />;
 }
